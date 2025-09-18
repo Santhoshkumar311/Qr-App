@@ -47,8 +47,11 @@ export const QrCode = () => {
         <input type="text" id="dataInput" value={qrData} placeholder="Enter data for QR Code" onChange={(e)=> setData(e.target.value)}/>
         <label htmlFor="dataInput" className="input-label">Image size(e.g.,150):</label>
         <input type="text" id="sizeInput" placeholder="Enter image size" value={qrSize} onChange={(e)=> setQrSize(e.target.value)}/>
-        <button className="Gbutton" disabled={loading} onClick={GenerateQR} >Generate QR Code</button>
+        <div style={{display:"flex"}}>
+          <button className="Gbutton" disabled={loading} onClick={GenerateQR} >Generate QR Code</button>
         <button className="Dbutton" onClick={DownloadQR}>Download QR Code</button>
+        </div>
+        
       </div>
       <p className="footer"> <a href="https://www.linkedin.com/in/santhoshkumar-k-71723729b/"></a></p>
     </div>
